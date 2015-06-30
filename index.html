@@ -2,19 +2,18 @@
 	<title>Cud Js</title>
 	<head>
         <Meta http-equiv = "Content-Type" content = "text / html; charset = utf-8" />
-		<script type="text/javascript" src="js/function.js"></script>
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<div class="container form">
 		<h2>Formulario</h2>
-		<form action="" class="form-horizontal  " role="form">
+		<form action="" id="frmCadastre" class="form-horizontal  " role="form" >
 			<div class="form-group">
 			<label for = "txtID"  class="col-xs-2 control-label"> ID: </label>
 			<div class="col-xs-10">
@@ -32,12 +31,15 @@
 				<div class="col-xs-10">
   		 	 <Input type = "text" class="form-control" id = "txtEmail" /> </div></div>
 
-  		   	 <Input type = "submit" value = "Guardar" class="btn btn-info btn-lg" id = "btnSave" />
+  		   	 <Input type="submit" value = "Guardar" class="btn btn-info btn-lg" id = "btnSave" />
 
 		</form>
 		</div>
 		<Table id = "tblList">
 
 		</Table>
-	</body>
+	</body>		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+		<script type="text/javascript" src="js/function.js"></script>
+
 </html>

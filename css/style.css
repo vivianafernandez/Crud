@@ -1,6 +1,11 @@
 body{
  background-color: ##D2D7D3;
 }
+h2{
+	text-align: center;
+	font-weight: 600;
+	padding: 20px;
+}
 .form{
 
 	background: #f9bf3b;
@@ -8,11 +13,4 @@ body{
 	padding: 30px;
 	margin:50px;
 }
-h2{
-	text-align: center;
-	font-weight: 600;
-	padding: 20px;
-}
-.btn{
-	text-align: center;
-}
+
