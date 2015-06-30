@@ -3,6 +3,16 @@ body{
 }
 .form{
 
-	background: #59ABE3;
+	background: #f9bf3b;
 	color: #fff;
+	padding: 30px;
+	margin:50px;
+}
+h2{
+	text-align: center;
+	font-weight: 600;
+	padding: 20px;
+}
+.btn{
+	text-align: center;
 }
