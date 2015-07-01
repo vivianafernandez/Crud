@@ -40,11 +40,11 @@ function List(){
     $("#tblList").html("");
     $("#tblList").html( 
         "<thead class='tab'>"+ "    <tr>"+
-         "  <th></th>"+ 
-         "  <th>ID</th>"+ 
-         "  <th>Name</th>"+ 
-         "  <th>Phone</th>"+
-          " <th>Email</th>"+
+         "  <th class='tab'></th>"+ 
+         "  <th class='tab'>ID</th>"+ 
+         "  <th class='tab'>Name</th>"+ 
+         "  <th class='tab'>Phone</th>"+
+          " <th class='tab'>Email</th>"+
           " </tr>"+ "</thead>"+ 
           "<tbody class='tab'>"+ "</tbody>" ); 
     for(var i in tbClients){
@@ -52,8 +52,7 @@ function List(){
       $("#tblList tbody").append("<tr>"+ 
         "   <td class='imged'><img src='img/edit.png' alt='Edit"+i+"' class='btnEdit'/><img src='img/borrar.png' alt='Delete"+i+"' class='btnDelete'/></td>" +
          "  <td class='tab'>"+cli.ID+"</td>" +
-         "  <td class='tab'>"+cli.ID+"</td>" +
-          " <td class='tab'>"+cli.Name+"</td>" + 
+         " <td class='tab'>"+cli.Name+"</td>" + 
           " <td class='tab'>"+cli.Phone+"</td>" +
            "    <td class='tab'>"+cli.Email+"</td>" + 
            "</tr>"); 
