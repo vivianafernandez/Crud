@@ -25,7 +25,7 @@ function Add(){
 
         localStorage.setItem("tbClients", JSON.stringify(tbClients)); 
 
-        alert("The data was saved.");
+        alert("Dastos Almacenados.");
          return true;
     
     // return List();
@@ -39,22 +39,23 @@ function List(){
     var tblists = $('#tblList');
     $("#tblList").html("");
     $("#tblList").html( 
-        "<thead>"+ "    <tr>"+
+        "<thead class='tab'>"+ "    <tr>"+
          "  <th></th>"+ 
          "  <th>ID</th>"+ 
          "  <th>Name</th>"+ 
          "  <th>Phone</th>"+
           " <th>Email</th>"+
           " </tr>"+ "</thead>"+ 
-          "<tbody>"+ "</tbody>" ); 
+          "<tbody class='tab'>"+ "</tbody>" ); 
     for(var i in tbClients){
      var cli = JSON.parse(tbClients[i]);
       $("#tblList tbody").append("<tr>"+ 
-        "   <td><img src='img/edit.png' alt='Edit"+i+"' class='btnEdit'/><img src='img/borrar.png' alt='Delete"+i+"' class='btnDelete'/></td>" +
-         "  <td>"+cli.ID+"</td>" +
-          " <td>"+cli.Name+"</td>" + 
-          " <td>"+cli.Phone+"</td>" +
-           "    <td>"+cli.Email+"</td>" + 
+        "   <td class='imged'><img src='img/edit.png' alt='Edit"+i+"' class='btnEdit'/><img src='img/borrar.png' alt='Delete"+i+"' class='btnDelete'/></td>" +
+         "  <td class='tab'>"+cli.ID+"</td>" +
+         "  <td class='tab'>"+cli.ID+"</td>" +
+          " <td class='tab'>"+cli.Name+"</td>" + 
+          " <td class='tab'>"+cli.Phone+"</td>" +
+           "    <td class='tab'>"+cli.Email+"</td>" + 
            "</tr>"); 
   }
  } 
@@ -65,7 +66,7 @@ function Edit(){
      Phone : $("#txtPhone").val(), 
      Email : $("#txtEmail").val() });//Alter the selected item on the table 
      localStorage.setItem("tbClients", JSON.stringify(tbClients));
-    alert("The data was edited.")
+    alert("Datos Editados.")
     operation = "A"; //Return to default value return true; 
    
 } 
@@ -73,7 +74,7 @@ function Edit(){
 function Delete(){ 
     tbClients.splice(selected_index, 1); 
     localStorage.setItem("tbClients", JSON.stringify(tbClients));
-     alert("Client deleted.");
+     alert("Datos ELiminados.");
       
  } 
 
