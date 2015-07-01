@@ -10,7 +10,7 @@
              if(tbClients == null) //If there is no data, initialize an empty array 
                 tbClients = [];  
 
-
+              List();
 function Add(){ 
     var client = JSON.stringify({ 
         ID : $("#txtID").val(),
@@ -26,30 +26,13 @@ function Add(){
         localStorage.setItem("tbClients", JSON.stringify(tbClients)); 
 
         alert("The data was saved.");
-    // return true;
+         return true;
     
-    return List();
+    // return List();
     
 
 
 } 
-
-function Edit(){
-     tbClients[selected_index] = JSON.stringify({ 
-     ID : $("#txtID").val(), 
-     Name : $("#txtName").val(), 
-     Phone : $("#txtPhone").val(), 
-     Email : $("#txtEmail").val() });//Alter the selected item on the table 
-     localStorage.setItem("tbClients", JSON.stringify(tbClients));
-    alert("The data was edited.")
-    operation = "A"; //Return to default value return true; 
-} 
-
-function Delete(){ 
-    tbClients.splice(selected_index, 1); 
-    localStorage.setItem("tbClients", JSON.stringify(tbClients));
-     alert("Client deleted.");
- } 
 
 function List(){
     // console.log("aqui");
@@ -75,6 +58,25 @@ function List(){
            "</tr>"); 
   }
  } 
+function Edit(){
+     tbClients[selected_index] = JSON.stringify({ 
+     ID : $("#txtID").val(), 
+     Name : $("#txtName").val(), 
+     Phone : $("#txtPhone").val(), 
+     Email : $("#txtEmail").val() });//Alter the selected item on the table 
+     localStorage.setItem("tbClients", JSON.stringify(tbClients));
+    alert("The data was edited.")
+    operation = "A"; //Return to default value return true; 
+   
+} 
+
+function Delete(){ 
+    tbClients.splice(selected_index, 1); 
+    localStorage.setItem("tbClients", JSON.stringify(tbClients));
+     alert("Client deleted.");
+      
+ } 
+
 
 $("#frmCadastre").bind("submit",function(){
  if(operation == "A") 
@@ -92,6 +94,7 @@ $(".btnEdit").bind("click", function(){
    $("#txtEmail").val(cli.Email);
     $("#txtID").attr("readonly","readonly"); 
     $("#txtName").focus(); 
+     
 }); 
 
 $(".btnDelete").bind("click", function(){ 
@@ -99,8 +102,6 @@ $(".btnDelete").bind("click", function(){
     Delete(); 
     List(); 
 }); 
-
-
             
 })(jQuery);
             
